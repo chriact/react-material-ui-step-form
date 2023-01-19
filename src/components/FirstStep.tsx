@@ -26,15 +26,24 @@ export default function FirstStep() {
             variant={variant}
             margin={margin}
             fullWidth
-            label='First Name'
-            name='firstName'
-            placeholder='Your first name'
-            value={firstName.value}
+            select
+            SelectProps={{
+              native: true
+            }}
+            label='Event/campaign'
+            name='event'
+            value={gender.value}
             onChange={handleChange}
-            error={!!firstName.error}
-            helperText={firstName.error}
-            required={firstName.required}
-          />
+            error={!!gender.error}
+            helperText={gender.error}
+            required={gender.required}
+          >
+            <option value=''> </option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+          </TextField>
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -78,8 +87,8 @@ export default function FirstStep() {
             SelectProps={{
               native: true
             }}
-            label='Gender'
-            name='gender'
+            label='Event/campaign'
+            name='event'
             value={gender.value}
             onChange={handleChange}
             error={!!gender.error}
@@ -87,8 +96,10 @@ export default function FirstStep() {
             required={gender.required}
           >
             <option value=''> </option>
-            <option value='Male'>Male</option>
-            <option value='Female'>Female</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
           </TextField>
         </Grid>
       </Grid>

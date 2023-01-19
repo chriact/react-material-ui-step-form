@@ -6,6 +6,7 @@ import StepLabel from '@mui/material/StepLabel'
 import Typography from '@mui/material/Typography'
 import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
+import SecondStep from './ThirdStep'
 import Confirm from './Confirm'
 import Success from './Success'
 import { AppContext } from '../Context'
@@ -19,6 +20,8 @@ const handleSteps = (step: number) => {
     case 1:
       return <SecondStep />
     case 2:
+      return <ThirdStep />
+    case 3:
       return <Confirm />
     default:
       throw new Error('Unknown step')
