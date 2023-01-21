@@ -6,13 +6,13 @@ import StepLabel from '@mui/material/StepLabel'
 import Typography from '@mui/material/Typography'
 import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
-import SecondStep from './ThirdStep'
+import ThirdStep from './ThirdStep'
 import Confirm from './Confirm'
 import Success from './Success'
 import { AppContext } from '../Context'
 
 // Step titles
-const labels = ['First Step', 'Second Step', 'Confirmation']
+const labels = ['First Step', 'Second Step', 'Third Step', 'Confirmation']
 const handleSteps = (step: number) => {
   switch (step) {
     case 0:
@@ -39,10 +39,10 @@ export default function StepForm() {
         <>
           <Box sx={{ my: 5 }}>
             <Typography variant='h4' align='center'>
-              Multi Step Form
+              Kunde in Datenbank anlegen
             </Typography>
             <Typography variant='subtitle2' align='center' sx={{ mt: 2 }}>
-              React Material UI multi step form with basic form validation logic.
+              Bitte füllen Sie das Formular aus, um den Kunden in der Datenbank anzulegen. Bei Feldern, die mit einem * markiert sind, handelt es sich um Pflichtfelder. Bitte fragen Sie den Kunden stets nach seiner Zustimmung zur Marketingkommunikation (Opt-In).
             </Typography>
           </Box>
           <Stepper activeStep={activeStep} sx={{ py: 3 }} alternativeLabel>
